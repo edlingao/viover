@@ -1,0 +1,18 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "viover",
+  "outputfilename": "viover",
+  "frontend:dir": "web/app",
+  "frontend:install": "pnpm install",
+  "frontend:build": "pnpm build",
+  "frontend:dev:watcher": "pnpm dev",
+  "frontend:dev:serverUrl": "auto",
+  "assetdir": "web/static",
+  "author": {
+    "name": "edlingao",
+    "email": "sonido244@gmail.com"
+  },
+  "info": {
+    "NSMicrophoneUsageDescription": "This app needs microphone access to record audio."
+  }
+}
