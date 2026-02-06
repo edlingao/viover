@@ -108,6 +108,11 @@ jobs:
           cp ffmpeg build/bin/viover.app/Contents/Resources/ffmpeg
           chmod +x build/bin/viover.app/Contents/Resources/ffmpeg
 
+      - name: Codesign app (macOS)
+        if: matrix.goos == 'darwin'
+        run: |
+          codesign --deep --force --sign - --entitlements build/darwin/entitlements.plist build/bin/viover.app
+
       - name: Bundle FFmpeg (Windows)
         if: matrix.goos == 'windows'
         shell: pwsh
